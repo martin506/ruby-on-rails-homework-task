@@ -59,3 +59,42 @@ Migrating to CreateUsers (20250529104552)
   [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20250529104552' /*application='SvcItems'*/[0m
   [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateUsers (20250529104552)
+  [1m[35m (25.5ms)[0m  [1m[35m      CREATE TABLE `users` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `name`                 varchar(255) NOT NULL,
+        `email`                text         NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+
+        PRIMARY KEY (`id`),
+        UNIQUE KEY `index_users_on_uuid` (`uuid`)
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250529104552') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='SvcItems'*/[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('f0077948-a1b6-456d-8b54-461940e8b306', 'John Doe', 'test@gmail.com', '2025-05-29 10:57:41.797534', '2025-05-29 10:57:41.797534') /*application='SvcItems'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='SvcItems'*/[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN /*application='SvcItems'*/[0m
+  [1m[36mUser Create (9.2ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6', 'John Doe', 'test@gmail.com', '2025-05-29 10:57:54.621246', '2025-05-29 10:57:54.621246') /*application='SvcItems'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='SvcItems'*/[0m
+Started POST "/relay/events" for 172.18.0.1 at 2025-05-29 14:00:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/relay/events"):
+  
+Started GET "/users/dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6" for ::1 at 2025-05-29 14:02:12 +0300
+Processing by UsersController#show as */*
+  Parameters: {"uuid" => "dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6' LIMIT 1 /*action='show',application='SvcItems',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:3:in 'UsersController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 44ms (Views: 1.8ms | ActiveRecord: 13.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+

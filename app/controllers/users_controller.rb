@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find_by(uuid: params[:uuid])
+    @user = User.find_by!(uuid: params[:uuid])
 
     render json: {
       uuid: @user.uuid,

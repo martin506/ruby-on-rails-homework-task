@@ -98,3 +98,520 @@ Processing by UsersController#show as */*
 Completed 200 OK in 44ms (Views: 1.8ms | ActiveRecord: 13.5ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+  [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (0.4ms)[0m  [1m[35m      CREATE TABLE `items` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `price`                decimal(2)   NOT NULL,
+        `brand`                varchar(255) NOT NULL,
+        `photo_url`            text         NOT NULL,
+        `status`               tinyint      NOT NULL,
+        `user_id`              bigint       NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+        
+        PRIMARY KEY (`id`),
+        UNIQUE KEY  `index_items_on_uuid` (`uuid`),
+        FOREIGN KEY `index_items_on_users` (`user_id`)
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (2.3ms)[0m  [1m[35m      CREATE TABLE `items` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `price`                decimal(2)   NOT NULL,
+        `brand`                varchar(255) NOT NULL,
+        `photo_url`            text         NOT NULL,
+        `status`               tinyint      NOT NULL,
+        `user_id`              bigint       NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+        
+        PRIMARY KEY (`id`),
+        UNIQUE KEY  `index_items_on_uuid` (`uuid`),
+        FOREIGN KEY `index_items_on_users` (`user_id`),
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (0.6ms)[0m  [1m[35m      CREATE TABLE `items` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `price`                decimal(10, 2)   NOT NULL,
+        `brand`                varchar(255) NOT NULL,
+        `photo_url`            text         NOT NULL,
+        `status`               tinyint      NOT NULL,
+        `user_id`              bigint       NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+        
+        PRIMARY KEY (`id`),
+        UNIQUE KEY  `index_items_on_uuid` (`uuid`),
+        FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (21.0ms)[0m  [1m[35m      CREATE TABLE `items` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `price`                decimal(10,2) NOT NULL, -- Adjusted precision for decimals
+        `brand`                varchar(255) NOT NULL,
+        `photo_url`            text         NOT NULL,
+        `status`               tinyint(1)      NOT NULL,
+        `user_id`              bigint       NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+        
+        PRIMARY KEY (`id`),
+        UNIQUE KEY  `index_items_on_uuid` (`uuid`),
+        -- Correct foreign key syntax
+        FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250529111204') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (5.3ms)[0m  [1m[35mDROP TABLE `items` /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20250529111204' /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2296267123518063255', 0) /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+Migrating to CreateItems (20250529111204)
+  [1m[35m (9.2ms)[0m  [1m[35m      CREATE TABLE `items` (
+        `id`                   bigint(20)   NOT NULL AUTO_INCREMENT,
+        `uuid`                 varchar(36)  NOT NULL,
+        `price`                decimal(10,2) NOT NULL, -- Adjusted precision for decimals
+        `brand`                varchar(255) NOT NULL,
+        `photo_url`            text         NOT NULL,
+        `status`               tinyint      NOT NULL DEFAULT 1,
+        `user_id`              bigint       NOT NULL,
+        `created_at`           datetime(6)  NOT NULL,
+        `updated_at`           datetime(6)  NOT NULL,
+        
+        PRIMARY KEY (`id`),
+        UNIQUE KEY  `index_items_on_uuid` (`uuid`),
+        -- Correct foreign key syntax
+        FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+      ) ENGINE=InnoDB COLLATE=utf8mb4_bin;
+ /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20250529111204') /*application='SvcItems'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2296267123518063255') /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/users/dcc170b4-909e-41e5-a8f7-39aa5ba9e06" for ::1 at 2025-05-29 14:54:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by UsersController#show as */*
+  Parameters: {"uuid" => "dcc170b4-909e-41e5-a8f7-39aa5ba9e06"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'dcc170b4-909e-41e5-a8f7-39aa5ba9e06' LIMIT 1 /*action='show',application='SvcItems',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:3:in 'UsersController#show'
+Completed 404 Not Found in 29ms (ActiveRecord: 13.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with [WHERE `users`.`uuid` = ?]):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#show'
+Started GET "/users/dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6" for ::1 at 2025-05-29 14:54:40 +0300
+Processing by UsersController#show as */*
+  Parameters: {"uuid" => "dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6' LIMIT 1 /*action='show',application='SvcItems',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:3:in 'UsersController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6" for ::1 at 2025-05-29 14:54:42 +0300
+Processing by UsersController#show as */*
+  Parameters: {"uuid" => "dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6' LIMIT 1 /*action='show',application='SvcItems',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:3:in 'UsersController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6" for ::1 at 2025-05-29 14:54:47 +0300
+Processing by UsersController#show as */*
+  Parameters: {"uuid" => "dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'dcc170b4-909e-41e5-a8f7-39aa5ba9e0e6' LIMIT 1 /*action='show',application='SvcItems',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:3:in 'UsersController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/relay/events" for 172.18.0.1 at 2025-05-29 15:01:57 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/relay/events"):
+  
+Started POST "/relay/events" for 172.18.0.1 at 2025-05-29 16:00:09 +0300
+  
+SyntaxError (/Users/martynassimanavicius/Documents/workshops/ruby/ruby-on-rails/config/routes.rb:15: syntax errors found
+  [2m12 | [m  resources :users do
+  [2m13 | [m    resources :items, only: [:show]
+[1;31m> [m[2m14 | [m    resources :items, 
+  [2m   | [m                    [1;31m^[m unexpected 'end'; expected an argument
+[1;31m> [m[2m15 | [m  end
+  [2m   | [m  [1;31m^~~[m unexpected 'end', assuming it is closing the parent 'do'..'end' block
+  [2m   | [m  [1;31m^~~[m unexpected 'end'; expected an argument
+  [2m16 | [m
+  [2m17 | [m
+):
+  
+config/routes.rb:15: syntax errors found
+Started POST "/users/1" for ::1 at 2025-05-29 16:11:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started POST "/users/1" for ::1 at 2025-05-29 16:11:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started POST "/users/1" for ::1 at 2025-05-29 16:12:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "price": 1.23,
+    "brand": "balenciaga addias",
+    "photo_url": "some_url",
+}
+Started POST "/users/1" for ::1 at 2025-05-29 16:13:21 +0300
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "price": 1.23,
+    "brand": "balenciaga addias",
+    "photo_url": "some_url",
+}
+Started POST "/users/1" for ::1 at 2025-05-29 16:13:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "price": 1.23,
+    "brand": "balenciaga addias",
+    "photo_url": "some_url",
+}
+Started POST "/users/1" for ::1 at 2025-05-29 16:16:20 +0300
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "price": 1.23,
+    "brand": "balenciaga addias",
+    "photo_url": "some_url",
+}
+Started POST "/users/1" for ::1 at 2025-05-29 16:16:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "price": 1.23,
+    "brand": "balenciaga addias",
+    "photo_url": "some_url",
+}
+Started POST "/users/1" for ::1 at 2025-05-29 16:17:01 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1" for ::1 at 2025-05-29 16:17:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+NameError (undefined local variable or method 'user_id' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:12:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started POST "/users/1" for ::1 at 2025-05-29 16:20:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:21:53 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (5.1ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('f810cc72-b0f2-42c0-9ecd-5e79190182d9', 1.23, 'balenciaga addias', 'some_url', 1, NULL, '2025-05-29 13:21:53.869586', '2025-05-29 13:21:53.869586') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 29.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null)
+Caused by: Mysql2::Error (Column 'user_id' cannot be null)
+
+Information for: ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null):
+  
+
+Information for cause: Mysql2::Error (Column 'user_id' cannot be null):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:22:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (5.0ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('25243331-59fc-4e6c-b23a-86d6270d7d06', 1.23, 'balenciaga addias', 'some_url', 1, NULL, '2025-05-29 13:22:11.653521', '2025-05-29 13:22:11.653521') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 29.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null)
+Caused by: Mysql2::Error (Column 'user_id' cannot be null)
+
+Information for: ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null):
+  
+
+Information for cause: Mysql2::Error (Column 'user_id' cannot be null):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:23:59 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (3.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('22e97c89-bd07-4dd9-8f3a-1a4c08195258', 1.23, 'balenciaga addias', 'some_url', 1, NULL, '2025-05-29 13:23:59.650978', '2025-05-29 13:23:59.650978') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 15.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null)
+Caused by: Mysql2::Error (Column 'user_id' cannot be null)
+
+Information for: ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null):
+  
+
+Information for cause: Mysql2::Error (Column 'user_id' cannot be null):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:24:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (6.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('4cf22d0e-e51a-4398-9f72-48ff9e6ad84c', 1.23, 'balenciaga addias', 'some_url', 1, NULL, '2025-05-29 13:24:09.031088', '2025-05-29 13:24:09.031088') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 19.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null)
+Caused by: Mysql2::Error (Column 'user_id' cannot be null)
+
+Information for: ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null):
+  
+
+Information for cause: Mysql2::Error (Column 'user_id' cannot be null):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:26:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (5.6ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('aca8a433-3d91-48c1-a5c9-9affaaca9767', 1.23, 'balenciaga addias', 'some_url', 1, NULL, '2025-05-29 13:26:04.033832', '2025-05-29 13:26:04.033832') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 17.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null)
+Caused by: Mysql2::Error (Column 'user_id' cannot be null)
+
+Information for: ActiveRecord::NotNullViolation (Mysql2::Error: Column 'user_id' cannot be null):
+  
+
+Information for cause: Mysql2::Error (Column 'user_id' cannot be null):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:29:10 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (2.9ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ce9ad884-7f03-48b5-8855-a116331d5fce', 1.23, 'balenciaga addias', 'some_url', 1, 0, '2025-05-29 13:29:10.432531', '2025-05-29 13:29:10.432531') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`svc_items_development`.`items`, CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)))
+Caused by: Mysql2::Error (Cannot add or update a child row: a foreign key constraint fails (`svc_items_development`.`items`, CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)))
+
+Information for: ActiveRecord::InvalidForeignKey (Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`svc_items_development`.`items`, CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))):
+  
+
+Information for cause: Mysql2::Error (Cannot add or update a child row: a foreign key constraint fails (`svc_items_development`.`items`, CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))):
+  
+app/controllers/items_controller.rb:18:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:32:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 8.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/items_controller.rb:16:in 'String#+'
+app/controllers/items_controller.rb:16:in 'ItemsController#create'
+Started POST "/users/1/items" for ::1 at 2025-05-29 16:32:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (6.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url", "user_id" => "1", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "some_url"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (4.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('a2f2e663-a95c-417b-b0ea-1689c32a3189', 1.23, 'balenciaga addias', 'some_url', 1, 1, '2025-05-29 13:32:49.648989', '2025-05-29 13:32:49.648989') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 201 Created in 30ms (Views: 2.3ms | ActiveRecord: 15.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:33:00 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "balenciaga addias", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (2.0ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('94c75eca-1f16-4b25-b96a-849b85bba9fc', 1.23, 'balenciaga addias', 'dammmmm', 1, 2, '2025-05-29 13:33:00.190661', '2025-05-29 13:33:00.190661') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 201 Created in 14ms (Views: 0.8ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2/items/f0077948-a1b6-456d-8b54-461940e8b306" for ::1 at 2025-05-29 16:36:40 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "f0077948-a1b6-456d-8b54-461940e8b306"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'f0077948-a1b6-456d-8b54-461940e8b306' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 27ms (ActiveRecord: 5.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/1/items/f0077948-a1b6-456d-8b54-461940e8b306" for ::1 at 2025-05-29 16:36:48 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "1", "uuid" => "f0077948-a1b6-456d-8b54-461940e8b306"}
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'f0077948-a1b6-456d-8b54-461940e8b306' AND `items`.`user_id` = 1 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/94c75eca-1f16-4b25-b96a-849b85bba9fc" for ::1 at 2025-05-29 16:37:28 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "94c75eca-1f16-4b25-b96a-849b85bba9fc"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '94c75eca-1f16-4b25-b96a-849b85bba9fc' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/users/2/items/94c75eca-1f16-4b25-b96a-849b85bba9fc" for ::1 at 2025-05-29 16:37:47 +0300
+Processing by ItemsController#destroy as */*
+  Parameters: {"user_id" => "2", "uuid" => "94c75eca-1f16-4b25-b96a-849b85bba9fc"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '94c75eca-1f16-4b25-b96a-849b85bba9fc' AND `items`.`user_id` = 2 LIMIT 1 /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:40:in 'ItemsController#destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+  [1m[36mItem Destroy (3.7ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 3 /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 6.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/1/items/a2f2e663-a95c-417b-b0ea-1689c32a3189" for ::1 at 2025-05-29 16:38:41 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "1", "uuid" => "a2f2e663-a95c-417b-b0ea-1689c32a3189", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'a2f2e663-a95c-417b-b0ea-1689c32a3189' AND `items`.`user_id` = 1 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:54:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+  [1m[36mItem Update (2.0ms)[0m  [1m[33mUPDATE `items` SET `items`.`brand` = 'martin somet', `items`.`photo_url` = 'simas simas', `items`.`updated_at` = '2025-05-29 13:38:41.406570' WHERE `items`.`id` = 2 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 25ms (Views: 0.9ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+

@@ -7,6 +7,16 @@ Rails.application.routes.draw do
 
   resources :users, param: :uuid, only: %i[show]
 
+
+
+  # routes for items
+
+  resources :users, param: :id do
+    resources :items, param: :uuid, only: [:show, :destroy, :update]
+    resources :items, only: [:create]
+  end
+
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

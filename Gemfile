@@ -1,4 +1,19 @@
-source "https://rubygems.org"
+source 'https://nexus.vinted.net/repository/rubygems-proxy-repos-group/'
+private_gem_source = 'https://nexus.vinted.net/repository/rubygems-cloudsmith-repos-group/'
+
+gem 'interactor-initializer' # to be used for writing interactors
+gem 'active_model_serializers' # for object serialization
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails' # we skipped default testing framework for Rails and are using RSpec instead
+  gem 'factory_bot_rails' # for creating spec fixtures
+end
+
+group :development do
+  gem 'rubocop', require: false
+  gem 'vinted-rubocop', require: false, source: private_gem_source
+end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
@@ -24,7 +39,3 @@ gem "thruster", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
-group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-end

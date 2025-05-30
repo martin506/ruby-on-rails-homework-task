@@ -20,6 +20,12 @@ Bundler.require(*Rails.groups)
 
 module SvcItems
   class Application < Rails::Application
+    config.session_store :cookie_store, key: '_svc-items_session'
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use config.session_store, config.session_options
+
+    config.active_job.queue_adapter = :sidekiq
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 

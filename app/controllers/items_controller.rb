@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
 
     @item.destroy
 
-    render json: @item
+    render json: @item, serializer: ItemSerializer
   end
 
   def update
@@ -37,9 +37,13 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all.where({user_id: params[:user_id]}).order(created_at: :desc).page(params[:page])
+    @user = User.find(params[:user_id])
+    @items = @user.items.page(params[:page])
 
     render json: {items: @items}
+
+  # rescue ActiveRecord::RecordNotFound
+  #   head  :not_found
   end
 
   def item_params

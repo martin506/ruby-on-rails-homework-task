@@ -3,6 +3,8 @@
 class Item < ApplicationRecord
   belongs_to :user
 
+  max_paginates_per 5
+
   enum :status, sold: 0, active: 1
   before_create :set_uuid
 

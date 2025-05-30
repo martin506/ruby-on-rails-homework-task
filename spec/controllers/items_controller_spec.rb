@@ -105,7 +105,7 @@ RSpec.describe ItemsController do
   end
 
   describe '#index' do
-    subject { get :index, params: { user_id: user.id } }
+    subject { get :index, params: { user_id: user.id, page: 1 } }
 
     before do
       item

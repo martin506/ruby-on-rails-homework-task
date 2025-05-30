@@ -2986,3 +2986,516 @@ Processing by UsersController#show as HTML
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.01ms)
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('61ce7736-cb85-42a9-bc35-bff412cf68d8', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:36.897460', '2025-05-30 07:00:36.897460')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('a8260607-bbbb-4618-96e0-5f89718069a5', 1.22, 'balenciaga addias', 'basic_url', 1, 235, '2025-05-30 07:00:36.916896', '2025-05-30 07:00:36.916896')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "235", "uuid" => "a8260607-bbbb-4618-96e0-5f89718069a5"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'a8260607-bbbb-4618-96e0-5f89718069a5' AND `items`.`user_id` = 235 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 19ms (Views: 8.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.6ms)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('f956c859-9f02-4c72-878b-9c3d52f47b88', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:36.983412', '2025-05-30 07:00:36.983412')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('99335143-064a-4c6a-ae41-1ebe5c30f6b1', 1.22, 'balenciaga addias', 'basic_url', 1, 236, '2025-05-30 07:00:36.994094', '2025-05-30 07:00:36.994094')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "236", "uuid" => "99335143-064a-4c6a-ae41-1ebe5c30f6b1"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '99335143-064a-4c6a-ae41-1ebe5c30f6b1' AND `items`.`user_id` = 236 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.7ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('0b392a53-627b-42e0-a85e-512e99b33913', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.017089', '2025-05-30 07:00:37.017089')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('f329d6e0-7d3d-47d5-a3a8-c5af83d8637e', 1.22, 'balenciaga addias', 'basic_url', 1, 237, '2025-05-30 07:00:37.026081', '2025-05-30 07:00:37.026081')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "237", "uuid" => "f329d6e0-7d3d-47d5-a3a8-c5af83d8637e"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'f329d6e0-7d3d-47d5-a3a8-c5af83d8637e' AND `items`.`user_id` = 237 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (0.7ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:00:37.035551' WHERE `items`.`id` = 163[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('38f1ae85-3641-4207-981f-8d3d73e55773', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.052006', '2025-05-30 07:00:37.052006')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('adf1716d-be45-4b54-bc86-0898e4a38c70', 1.22, 'balenciaga addias', 'basic_url', 1, 238, '2025-05-30 07:00:37.054976', '2025-05-30 07:00:37.054976')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "238", "uuid" => "adf1716d-be45-4b54-bc86-0898e4a38c70"}
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'adf1716d-be45-4b54-bc86-0898e4a38c70' AND `items`.`user_id` = 238 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (1.6ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:00:37.061258' WHERE `items`.`id` = 164[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 4.8ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` = 164 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('eb56909b-f4f9-4d93-a97a-d3cfdc9657c6', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.072782', '2025-05-30 07:00:37.072782')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "239"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 239 LIMIT 1[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('1107d6ff-dab5-464e-909c-e3c5280ce938', 2.29, 'carhartt', 'url', 1, 239, '2025-05-30 07:00:37.082807', '2025-05-30 07:00:37.082807')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 11ms (Views: 1.2ms | ActiveRecord: 2.9ms (2 queries, 0 cached) | GC: 1.7ms)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('1670ceba-581f-431f-ac61-ee629486bf94', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.093844', '2025-05-30 07:00:37.093844')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "240"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 240 LIMIT 1[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('063f32e3-ae67-4705-9578-39c8b5aa705f', 2.29, 'carhartt', 'url', 1, 240, '2025-05-30 07:00:37.100220', '2025-05-30 07:00:37.100220')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (1.62ms)
+Completed 201 Created in 5ms (Views: 2.0ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.6ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('b7c2abcb-6a5c-4877-8794-8fdcf4c01289', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.111017', '2025-05-30 07:00:37.111017')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('081ec985-2e24-4ba4-9399-b52fa61e9fe0', 1.22, 'balenciaga addias', 'basic_url', 1, 241, '2025-05-30 07:00:37.117169', '2025-05-30 07:00:37.117169')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "241", "uuid" => "081ec985-2e24-4ba4-9399-b52fa61e9fe0"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '081ec985-2e24-4ba4-9399-b52fa61e9fe0' AND `items`.`user_id` = 241 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 167[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.8ms)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('f8601be5-12e6-4d2f-a3e3-6c47905ed2bf', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.133236', '2025-05-30 07:00:37.133236')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('bc6dde3a-16f3-495f-9ba2-701df47bfe78', 1.22, 'balenciaga addias', 'basic_url', 1, 242, '2025-05-30 07:00:37.135507', '2025-05-30 07:00:37.135507')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "242", "uuid" => "bc6dde3a-16f3-495f-9ba2-701df47bfe78"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'bc6dde3a-16f3-495f-9ba2-701df47bfe78' AND `items`.`user_id` = 242 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 168[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.4ms (2 queries, 0 cached) | GC: 0.7ms)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('96754f5a-6240-4d1a-9390-f6e914d7fd74', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.149354', '2025-05-30 07:00:37.149354')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ff105a24-dd94-46d2-b7a3-c89f5a12cb54', 1.22, 'balenciaga addias', 'basic_url', 1, 243, '2025-05-30 07:00:37.151381', '2025-05-30 07:00:37.151381')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('af7f04e3-6890-4935-b58a-7b2fc79e5a64', 1.22, 'balenciaga addias', 'basic_url', 1, 243, '2025-05-30 07:00:37.152868', '2025-05-30 07:00:37.152868')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"user_id" => "243"}
+[active_model_serializers]   [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 243[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.93ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.1ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('40f3c6cc-c3a6-46ee-9d36-f7d987dbb94e', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.167999', '2025-05-30 07:00:37.167999')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('2fd7ee3d-b381-4d37-85e1-3e61858a345d', 1.22, 'balenciaga addias', 'basic_url', 1, 244, '2025-05-30 07:00:37.169458', '2025-05-30 07:00:37.169458')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('03aa4da1-f058-4c7a-97dc-63f6d3cc394c', 1.22, 'balenciaga addias', 'basic_url', 1, 244, '2025-05-30 07:00:37.170861', '2025-05-30 07:00:37.170861')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"user_id" => "244"}
+[active_model_serializers]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 244[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.68ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.6ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('5882ca4d-d94d-4dec-9bdd-a33f74a71e86', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.187349', '2025-05-30 07:00:37.187349')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "5882ca4d-d94d-4dec-9bdd-a33f74a71e86"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = '5882ca4d-d94d-4dec-9bdd-a33f74a71e86' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('058f6678-fb85-436b-99c9-edca7ee1caf1', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:37.197550', '2025-05-30 07:00:37.197550')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "058f6678-fb85-436b-99c9-edca7ee1caf1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = '058f6678-fb85-436b-99c9-edca7ee1caf1' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.01ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('67b0dc07-2f09-4fe4-9b4b-e7fdfa6dc478', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.420881', '2025-05-30 07:00:45.420881')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (2.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('00090354-ab7b-45b2-a878-a015051784b6', 1.22, 'balenciaga addias', 'basic_url', 1, 247, '2025-05-30 07:00:45.439741', '2025-05-30 07:00:45.439741')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "247", "uuid" => "00090354-ab7b-45b2-a878-a015051784b6"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '00090354-ab7b-45b2-a878-a015051784b6' AND `items`.`user_id` = 247 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 14ms (Views: 3.9ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.7ms)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('dfcb6cba-c4f4-4704-a122-3857df71bbb9', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.501490', '2025-05-30 07:00:45.501490')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.9ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ef461240-09b1-4960-a898-5227982fc7c6', 1.22, 'balenciaga addias', 'basic_url', 1, 248, '2025-05-30 07:00:45.510245', '2025-05-30 07:00:45.510245')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "248", "uuid" => "ef461240-09b1-4960-a898-5227982fc7c6"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'ef461240-09b1-4960-a898-5227982fc7c6' AND `items`.`user_id` = 248 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('599dd621-05ea-4023-891e-66755de7b0b4', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.533578', '2025-05-30 07:00:45.533578')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ab5c6e95-80d6-4788-8fe2-ffb1c2f128dc', 1.22, 'balenciaga addias', 'basic_url', 1, 249, '2025-05-30 07:00:45.540655', '2025-05-30 07:00:45.540655')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "249", "uuid" => "ab5c6e95-80d6-4788-8fe2-ffb1c2f128dc"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'ab5c6e95-80d6-4788-8fe2-ffb1c2f128dc' AND `items`.`user_id` = 249 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:00:45.549465' WHERE `items`.`id` = 175[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('05b51f24-69c5-4539-84f7-5789e71bdf7e', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.564566', '2025-05-30 07:00:45.564566')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('731720eb-8337-4890-ac28-c44458dbb561', 1.22, 'balenciaga addias', 'basic_url', 1, 250, '2025-05-30 07:00:45.567248', '2025-05-30 07:00:45.567248')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "250", "uuid" => "731720eb-8337-4890-ac28-c44458dbb561"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '731720eb-8337-4890-ac28-c44458dbb561' AND `items`.`user_id` = 250 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:00:45.571354' WHERE `items`.`id` = 176[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` = 176 LIMIT 1[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('b5193a7b-e32b-4e33-b916-a2c9c1efd018', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.579388', '2025-05-30 07:00:45.579388')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "251"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 251 LIMIT 1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('b5ec7d57-5cbe-49f1-9f4c-b0bd5673474e', 2.29, 'carhartt', 'url', 1, 251, '2025-05-30 07:00:45.589471', '2025-05-30 07:00:45.589471')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 9ms (Views: 1.1ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('e2c0fa3a-017e-4173-a51c-6bff93915e3a', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.598523', '2025-05-30 07:00:45.598523')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "252"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 252 LIMIT 1[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('b71a1f1b-29aa-497f-8dea-3d101a96fb15', 2.29, 'carhartt', 'url', 1, 252, '2025-05-30 07:00:45.604523', '2025-05-30 07:00:45.604523')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (1.23ms)
+Completed 201 Created in 5ms (Views: 1.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.5ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('451e7324-0398-4502-a68b-678048ea729a', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.613648', '2025-05-30 07:00:45.613648')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('d0dd9cc0-e495-4bc8-a2f0-c09b9856edff', 1.22, 'balenciaga addias', 'basic_url', 1, 253, '2025-05-30 07:00:45.619158', '2025-05-30 07:00:45.619158')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "253", "uuid" => "d0dd9cc0-e495-4bc8-a2f0-c09b9856edff"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'd0dd9cc0-e495-4bc8-a2f0-c09b9856edff' AND `items`.`user_id` = 253 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 179[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.7ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('cdc56ae2-1c70-4fa0-b462-4dd080c5d826', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.632649', '2025-05-30 07:00:45.632649')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('6e8567a0-6c32-4a0a-93cc-094f10ee56b5', 1.22, 'balenciaga addias', 'basic_url', 1, 254, '2025-05-30 07:00:45.635706', '2025-05-30 07:00:45.635706')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "254", "uuid" => "6e8567a0-6c32-4a0a-93cc-094f10ee56b5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '6e8567a0-6c32-4a0a-93cc-094f10ee56b5' AND `items`.`user_id` = 254 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 180[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.4ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('b8caf144-ae2a-4e71-bd95-d8db7739864b', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.648426', '2025-05-30 07:00:45.648426')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('87eedbfb-43df-4613-aa20-f7e71cf191b2', 1.22, 'balenciaga addias', 'basic_url', 1, 255, '2025-05-30 07:00:45.650628', '2025-05-30 07:00:45.650628')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('8f8b68b1-fb6f-42a1-b4db-a42382c25d9c', 1.22, 'balenciaga addias', 'basic_url', 1, 255, '2025-05-30 07:00:45.652609', '2025-05-30 07:00:45.652609')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"user_id" => "255"}
+[active_model_serializers]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 255[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.46ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.5ms)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('a91b8ccb-c46d-4d6f-bb69-30f9e0d61d71', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.667797', '2025-05-30 07:00:45.667797')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('1827a50f-f366-4d9f-b896-7f4e29a6da28', 1.22, 'balenciaga addias', 'basic_url', 1, 256, '2025-05-30 07:00:45.669296', '2025-05-30 07:00:45.669296')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('37645b94-7615-4a58-b448-97f91186b4ea', 1.22, 'balenciaga addias', 'basic_url', 1, 256, '2025-05-30 07:00:45.670815', '2025-05-30 07:00:45.670815')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"user_id" => "256"}
+[active_model_serializers]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 256[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.28ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.9ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('d046b193-c21b-431f-ad70-856ea2663454', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.688653', '2025-05-30 07:00:45.688653')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "d046b193-c21b-431f-ad70-856ea2663454"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'd046b193-c21b-431f-ad70-856ea2663454' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('cc8d64bc-6e13-4bf1-aa55-e3076219d936', 'John Doe', 'test@gmail.com', '2025-05-30 07:00:45.697924', '2025-05-30 07:00:45.697924')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "cc8d64bc-6e13-4bf1-aa55-e3076219d936"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'cc8d64bc-6e13-4bf1-aa55-e3076219d936' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('054ae424-d632-4046-91ee-da87bf0d64eb', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.001339', '2025-05-30 07:19:30.001339')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (2.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('a5412db1-8161-4654-892a-8f924d3bc379', 1.22, 'balenciaga addias', 'basic_url', 1, 259, '2025-05-30 07:19:30.026922', '2025-05-30 07:19:30.026922')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "259", "uuid" => "a5412db1-8161-4654-892a-8f924d3bc379"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'a5412db1-8161-4654-892a-8f924d3bc379' AND `items`.`user_id` = 259 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.2ms)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('852438c9-dd81-4361-97c1-14738db71b1d', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.077966', '2025-05-30 07:19:30.077966')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('df8c3c82-ee44-46be-b374-75b1fec3ed14', 1.22, 'balenciaga addias', 'basic_url', 1, 260, '2025-05-30 07:19:30.085303', '2025-05-30 07:19:30.085303')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"user_id" => "260", "uuid" => "df8c3c82-ee44-46be-b374-75b1fec3ed14"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'df8c3c82-ee44-46be-b374-75b1fec3ed14' AND `items`.`user_id` = 260 LIMIT 1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('038d48a5-52e4-4cbf-92b6-ecec619bc52a', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.104378', '2025-05-30 07:19:30.104378')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('e44afb25-4ce0-4687-ba0e-fd2cb0b708d2', 1.22, 'balenciaga addias', 'basic_url', 1, 261, '2025-05-30 07:19:30.110045', '2025-05-30 07:19:30.110045')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "261", "uuid" => "e44afb25-4ce0-4687-ba0e-fd2cb0b708d2"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'e44afb25-4ce0-4687-ba0e-fd2cb0b708d2' AND `items`.`user_id` = 261 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (0.7ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:19:30.117541' WHERE `items`.`id` = 187[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('45ff6e47-69cf-4896-b36f-a7c0261c14e5', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.130974', '2025-05-30 07:19:30.130974')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('3ce113ab-bbf9-4cd0-bf53-dd4dd136e0e0', 1.22, 'balenciaga addias', 'basic_url', 1, 262, '2025-05-30 07:19:30.133659', '2025-05-30 07:19:30.133659')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"brand" => "nike", "photo_url" => "url", "price" => "1.24"}, "user_id" => "262", "uuid" => "3ce113ab-bbf9-4cd0-bf53-dd4dd136e0e0"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '3ce113ab-bbf9-4cd0-bf53-dd4dd136e0e0' AND `items`.`user_id` = 262 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.24, `items`.`brand` = 'nike', `items`.`photo_url` = 'url', `items`.`updated_at` = '2025-05-30 07:19:30.137212' WHERE `items`.`id` = 188[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`id` = 188 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('e013b5fa-04bf-4717-8477-c0a09f5bb62c', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.143710', '2025-05-30 07:19:30.143710')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "263"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 263 LIMIT 1[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('68cb698e-cc90-4d45-b7e5-1ca39478daa0', 2.29, 'carhartt', 'url', 1, 263, '2025-05-30 07:19:30.151611', '2025-05-30 07:19:30.151611')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('be01310e-b2c5-42cc-9f0b-707898e01156', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.157493', '2025-05-30 07:19:30.157493')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"brand" => "carhartt", "photo_url" => "url", "price" => "2.29", "user_id" => "264"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 264 LIMIT 1[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('913f7867-a208-4ff4-81b6-454523303cb1', 2.29, 'carhartt', 'url', 1, 264, '2025-05-30 07:19:30.161458', '2025-05-30 07:19:30.161458')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 201 Created in 3ms (Views: 1.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('3e3bd978-901d-4bb3-9d08-410552cfc441', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.168296', '2025-05-30 07:19:30.168296')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('e7b7cddc-0fe7-4f9d-b7d0-12a185dcde1f', 1.22, 'balenciaga addias', 'basic_url', 1, 265, '2025-05-30 07:19:30.172711', '2025-05-30 07:19:30.172711')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "265", "uuid" => "e7b7cddc-0fe7-4f9d-b7d0-12a185dcde1f"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'e7b7cddc-0fe7-4f9d-b7d0-12a185dcde1f' AND `items`.`user_id` = 265 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 191[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('12f70c82-6a70-4e94-a98d-2ea2a2dd4e3f', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.183681', '2025-05-30 07:19:30.183681')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('696a3405-c616-4252-b157-f34e900655ff', 1.22, 'balenciaga addias', 'basic_url', 1, 266, '2025-05-30 07:19:30.185033', '2025-05-30 07:19:30.185033')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#destroy as HTML
+  Parameters: {"user_id" => "266", "uuid" => "696a3405-c616-4252-b157-f34e900655ff"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '696a3405-c616-4252-b157-f34e900655ff' AND `items`.`user_id` = 266 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 192[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('73fd4e0a-56f4-4f54-a9ed-6d022bb18655', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.193550', '2025-05-30 07:19:30.193550')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('4eceba49-8b26-48f6-b49b-d3fd3279d506', 1.22, 'balenciaga addias', 'basic_url', 1, 267, '2025-05-30 07:19:30.194874', '2025-05-30 07:19:30.194874')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('e2e557c3-7d12-4542-ada5-ef51cab44975', 1.22, 'balenciaga addias', 'basic_url', 1, 267, '2025-05-30 07:19:30.195911', '2025-05-30 07:19:30.195911')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"page" => "1", "user_id" => "267"}
+[active_model_serializers]   [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 267 ORDER BY `items`.`created_at` DESC LIMIT 5 OFFSET 0[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.01ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('16d0fd21-b607-4b5c-98f4-bcb1b35f6b14', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.208141', '2025-05-30 07:19:30.208141')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('8d2f0ce7-5b7c-44ba-b6d2-a16a5b71a24c', 1.22, 'balenciaga addias', 'basic_url', 1, 268, '2025-05-30 07:19:30.209156', '2025-05-30 07:19:30.209156')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('7396e5e2-6c64-4bae-9685-6cddf6db5c5c', 1.22, 'balenciaga addias', 'basic_url', 1, 268, '2025-05-30 07:19:30.209970', '2025-05-30 07:19:30.209970')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"page" => "1", "user_id" => "268"}
+[active_model_serializers]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 268 ORDER BY `items`.`created_at` DESC LIMIT 5 OFFSET 0[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.38ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('d5a6736c-1270-44cc-bc6e-4cd5e73e86e8', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.221220', '2025-05-30 07:19:30.221220')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "d5a6736c-1270-44cc-bc6e-4cd5e73e86e8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = 'd5a6736c-1270-44cc-bc6e-4cd5e73e86e8' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.01ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`uuid`, `name`, `email`, `created_at`, `updated_at`) VALUES ('33bf5831-4647-4408-9f45-7c9b65fbd7fa', 'John Doe', 'test@gmail.com', '2025-05-30 07:19:30.228463', '2025-05-30 07:19:30.228463')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"uuid" => "33bf5831-4647-4408-9f45-7c9b65fbd7fa"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uuid` = '33bf5831-4647-4408-9f45-7c9b65fbd7fa' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m

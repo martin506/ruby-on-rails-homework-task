@@ -2,13 +2,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find_by!({ uuid: params[:uuid], user_id: params[:user_id] })
 
-    render json: {
-      uuid: @item.uuid,
-      price: @item.price,
-      brand: @item.brand,
-      photo_url: @item.photo_url,
-      user_id: @item.user_id
-    }
+    render json: @item
   end
 
   def create
@@ -21,13 +15,7 @@ class ItemsController < ApplicationController
     )
 
     if @item.persisted?
-      render json: {
-        uuid: @item.uuid,
-        price: @item.price,
-        brand: @item.brand,
-        photo_url: @item.photo_url,
-        user_id: @item.user_id
-      }, status: :created
+      render json: @item, status: :created
     else
       render json: { errors: @item.errors.full_messages }, status: :unprocessable_entity
     end
@@ -38,30 +26,18 @@ class ItemsController < ApplicationController
 
     @item.destroy
 
-    render json: {
-      uuid: @item.uuid,
-      price: @item.price,
-      brand: @item.brand,
-      photo_url: @item.photo_url,
-      user_id: @item.user_id
-    }
+    render json: @item
   end
 
   def update
     @item = Item.find_by!({ uuid: params[:uuid], user_id: params[:user_id] })
     @item.update!(item_params)
 
-    render json: {
-      uuid: @item.uuid,
-      price: @item.price,
-      brand: @item.brand,
-      photo_url: @item.photo_url,
-      user_id: @item.user_id
-    }
+    render json: @item
   end
 
   def index
-    @items = Item.all.where({user_id: params[:user_id]})
+    @items = Item.all.where({user_id: params[:user_id]}).order(created_at: :desc).page(params[:page])
 
     render json: {items: @items}
   end

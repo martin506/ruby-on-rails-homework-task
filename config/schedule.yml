@@ -1,0 +1,11 @@
+logger_job:
+  cron: "* * * * *"
+  class: LoggerJob
+  description: Logs a message every minute
+  args:
+    - "martin"
+
+delete_job:
+  cron: "*/15 * * * *"
+  class: ItemsRemoverJob
+  description: Deletes item which exist longer than a day

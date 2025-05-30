@@ -1821,3 +1821,231 @@ Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:26:48 +0300
 [ActiveJob] [LoggerJob] [16b60324-5cc5-4ccd-80e7-9d11d8321d80] Hello from LoggerJob! My name is: martin!
 [ActiveJob] [LoggerJob] [16b60324-5cc5-4ccd-80e7-9d11d8321d80] Performed LoggerJob (Job ID: 16b60324-5cc5-4ccd-80e7-9d11d8321d80) from Sidekiq(default) in 2.7ms
 Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:41:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/?days=7" for ::1 at 2025-05-30 11:41:02 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:41:02 +0300
+Started GET "/sidekiq/queues" for ::1 at 2025-05-30 11:41:06 +0300
+Started GET "/sidekiq/scheduled" for ::1 at 2025-05-30 11:41:07 +0300
+Started GET "/sidekiq/morgue" for ::1 at 2025-05-30 11:41:08 +0300
+Started GET "/sidekiq/scheduled" for ::1 at 2025-05-30 11:41:10 +0300
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:41:11 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:41:11 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 11:41:21 +0300
+Started GET "/sidekiq/scheduled" for ::1 at 2025-05-30 11:41:22 +0300
+Started GET "/sidekiq/morgue" for ::1 at 2025-05-30 11:41:23 +0300
+Started GET "/sidekiq/metrics" for ::1 at 2025-05-30 11:41:23 +0300
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:41:26 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:41:26 +0300
+Started GET "/sidekiq/queues" for ::1 at 2025-05-30 11:41:31 +0300
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:41:54 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:41:54 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:04 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:14 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:16 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:18 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:20 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:22 +0300
+Started GET "/sidekiq/queues" for ::1 at 2025-05-30 11:42:23 +0300
+Started GET "/sidekiq/busy" for ::1 at 2025-05-30 11:42:25 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 11:42:27 +0300
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:42:30 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:30 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:32 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:34 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:36 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:38 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:40 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:42 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:51 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:53 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:55 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:57 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:42:59 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:01 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:03 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:05 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:07 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:09 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:11 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:15 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:18 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:22 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:24 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:26 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:28 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:32 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:34 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:38 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:46 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:56 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:43:58 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:00 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:21 +0300
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:44:22 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:22 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:24 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:26 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:28 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:30 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:32 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:34 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:36 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:38 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:40 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:42 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:44 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:46 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:48 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:50 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:53 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:57 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:44:59 +0300
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 11:45:08 +0300
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 11:46:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 11:46:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/" for ::1 at 2025-05-30 11:47:24 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:47:24 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 11:47:26 +0300
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 11:47:28 +0300
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1 /*application='SvcItems'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 12:21:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 12:22:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 12:22:18 +0300
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:22:24 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:22:24 +0300
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:23:59 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:24:00 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:24:08 +0300
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/" for ::1 at 2025-05-30 12:24:11 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 12:24:11 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 12:24:13 +0300
+Started GET "/sidekiq/stats" for ::1 at 2025-05-30 12:24:15 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 12:24:16 +0300
+Started GET "/sidekiq/retries/1748597061.0143628-7176e653c1387479df6f9a00" for ::1 at 2025-05-30 12:24:20 +0300
+Started GET "/sidekiq/retries/1748597061.0143628-7176e653c1387479df6f9a00" for ::1 at 2025-05-30 12:24:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 12:24:48 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 12:24:51 +0300
+Started GET "/sidekiq/cron" for ::1 at 2025-05-30 12:24:51 +0300
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:24:55 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:24:55 +0300
+  [1m[36mItem Delete All (0.6ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-29 09:24:55.725520') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:26:19 +0300
+Hello from LoggerJob! My name is: martin!
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:26:22 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:26:22 +0300
+  [1m[36mItem Delete All (1.1ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-29 09:26:22.701037') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:27:12 +0300
+  [1m[36mItem Delete All (1.2ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-29 09:27:12.975460') /*application='SvcItems'*/[0m
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:27:12 +0300
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:28:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 12:28:47 +0300
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 12:28:47 +0300
+  [1m[36mItem Delete All (1.7ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 08:28:47.171896') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Started POST "/sidekiq/cron/namespaces/default/jobs/delete_job/enqueue" for ::1 at 2025-05-30 13:26:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started GET "/sidekiq/cron/namespaces/default" for ::1 at 2025-05-30 13:26:12 +0300
+  [1m[36mItem Delete All (0.6ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 09:26:12.981718') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:26:22 +0300
+Started GET "/sidekiq/retries/1748600796.001974-c5f5d333543c1e9ff69cd373" for ::1 at 2025-05-30 13:26:30 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:26:33 +0300
+Started POST "/sidekiq/retries" for ::1 at 2025-05-30 13:26:35 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:26:35 +0300
+  [1m[36mItem Delete All (1.3ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 09:26:36.675849') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Started POST "/sidekiq/retries" for ::1 at 2025-05-30 13:26:40 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:26:40 +0300
+  [1m[36mItem Delete All (0.2ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 09:27:02.532362') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:28:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Started POST "/sidekiq/retries" for ::1 at 2025-05-30 13:28:53 +0300
+Started GET "/sidekiq/retries" for ::1 at 2025-05-30 13:28:53 +0300
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+  [1m[36mItem Delete All (0.8ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 09:30:09.384176') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+  [1m[36mItem Delete All (20.8ms)[0m  [1m[31mDELETE FROM `items` WHERE (created_at < '2025-05-30 09:45:32.741737') /*application='SvcItems'*/[0m
+  ↳ app/jobs/items_remover_job.rb:5:in 'ItemsRemoverJob#perform'
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!
+Hello from LoggerJob! My name is: martin!

@@ -1,4 +1,5 @@
-require 'sidekiq/web'
+require 'sidekiq/web' # require the web UI
+require 'sidekiq/cron/web'
 
 Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'

@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   # routes for items
 
   resources :users, param: :id do
-    resources :items, param: :uuid, only: [:show, :destroy, :update]
-    resources :items, only: [:create]
+    resources :items, param: :uuid
   end
 
 

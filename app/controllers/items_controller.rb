@@ -12,9 +12,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # Accessing the user_id from the URL params
-    puts "something; " + params[:user_id]
-
     @item = Item.create!(
       user_id: params[:user_id].to_i,
       price: params[:price],
@@ -63,8 +60,8 @@ class ItemsController < ApplicationController
     }
   end
 
-  def show_all
-    @items = Item.all
+  def index
+    @items = Item.all.where({user_id: params[:user_id]})
 
     render json: {items: @items}
   end

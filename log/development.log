@@ -615,3 +615,313 @@ Processing by ItemsController#update as */*
 Completed 200 OK in 25ms (Views: 0.9ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:39:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mItem Create (5.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('8edcc469-0feb-4e17-be34-c0fbf53e713c', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:39:50.771458', '2025-05-29 13:39:50.771458') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:18:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 201 Created in 31ms (Views: 2.6ms | ActiveRecord: 18.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:40:03 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "8edcc469-0feb-4e17-be34-c0fbf53e713c"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '8edcc469-0feb-4e17-be34-c0fbf53e713c' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.02ms)
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/1/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:40:12 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "1", "uuid" => "8edcc469-0feb-4e17-be34-c0fbf53e713c", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '8edcc469-0feb-4e17-be34-c0fbf53e713c' AND `items`.`user_id` = 1 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:54:in 'ItemsController#update'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:54:in 'ItemsController#update'
+Started PATCH "/users/2/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:40:17 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "2", "uuid" => "8edcc469-0feb-4e17-be34-c0fbf53e713c", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '8edcc469-0feb-4e17-be34-c0fbf53e713c' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:54:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+  [1m[36mItem Update (1.6ms)[0m  [1m[33mUPDATE `items` SET `items`.`brand` = 'martin somet', `items`.`photo_url` = 'simas simas', `items`.`updated_at` = '2025-05-29 13:40:17.041410' WHERE `items`.`id` = 4 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:55:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 2.9ms (2 queries, 0 cached) | GC: 0.6ms)
+
+
+Started DELETE "/users/2/items8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:40:29 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/2/items8edcc469-0feb-4e17-be34-c0fbf53e713c"):
+  
+Started DELETE "/users/2/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:40:34 +0300
+Processing by ItemsController#destroy as */*
+  Parameters: {"user_id" => "2", "uuid" => "8edcc469-0feb-4e17-be34-c0fbf53e713c"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '8edcc469-0feb-4e17-be34-c0fbf53e713c' AND `items`.`user_id` = 2 LIMIT 1 /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:40:in 'ItemsController#destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM `items` WHERE `items`.`id` = 4 /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='destroy',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:44:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 33ms (ActiveRecord: 13.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:45:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (4.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('e60049e5-4874-40d6-848c-606771128294', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:45:52.247815', '2025-05-29 13:45:52.247815') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 201 Created in 29ms (Views: 2.1ms | ActiveRecord: 21.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:45:52 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (2.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('344a9bb7-4b82-49c7-963b-3435fbe18ad4', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:45:52.879121', '2025-05-29 13:45:52.879121') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 201 Created in 26ms (Views: 1.5ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:45:53 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (1.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('aa9e2476-2956-4bb5-b756-fee5be18a2d4', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:45:53.471778', '2025-05-29 13:45:53.471778') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 201 Created in 20ms (Views: 0.6ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:45:54 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (3.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('d996b4e7-8d7b-4049-8da7-251cbd1e3167', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:45:54.032475', '2025-05-29 13:45:54.032475') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 201 Created in 24ms (Views: 0.4ms | ActiveRecord: 5.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:45:54 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (1.7ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('61899d1d-6c0d-431b-9059-27c9f1f738e3', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:45:54.532730', '2025-05-29 13:45:54.532730') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 201 Created in 12ms (Views: 2.6ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:45:57 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 13ms (ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:46:39 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 29ms (ActiveRecord: 8.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:48:28 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 21ms (ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:48:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 33ms (ActiveRecord: 14.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:50:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/items"):
+  
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:50:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (5.4ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('695587e5-c1d8-4cc5-bee4-d1970f95a401', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:50:44.726894', '2025-05-29 13:50:44.726894') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 201 Created in 32ms (Views: 2.6ms | ActiveRecord: 20.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/2/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:50:50 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "id" => "8edcc469-0feb-4e17-be34-c0fbf53e713c"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` IS NULL AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` IS NULL AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/aa9e2476-2956-4bb5-b756-fee5be18a2d4" for ::1 at 2025-05-29 16:51:06 +0300
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "id" => "aa9e2476-2956-4bb5-b756-fee5be18a2d4"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` IS NULL AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` IS NULL AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/aa9e2476-2956-4bb5-b756-fee5be18a2d4" for ::1 at 2025-05-29 16:52:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "aa9e2476-2956-4bb5-b756-fee5be18a2d4"}
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'aa9e2476-2956-4bb5-b756-fee5be18a2d4' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 43ms (Views: 2.1ms | ActiveRecord: 13.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/2/items" for ::1 at 2025-05-29 16:52:11 +0300
+Processing by ItemsController#create as */*
+  Parameters: {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm", "user_id" => "2", "item" => {"price" => 1.23, "brand" => "nike", "photo_url" => "dammmmm"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mItem Create (3.5ms)[0m  [1m[32mINSERT INTO `items` (`uuid`, `price`, `brand`, `photo_url`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('74b8c1f2-133d-48f9-b266-f0973178642f', 1.23, 'nike', 'dammmmm', 1, 2, '2025-05-29 13:52:11.239941', '2025-05-29 13:52:11.239941') /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:15:in 'ItemsController#create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 201 Created in 22ms (Views: 1.0ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/2/items/8edcc469-0feb-4e17-be34-c0fbf53e713c" for ::1 at 2025-05-29 16:52:14 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "2", "uuid" => "8edcc469-0feb-4e17-be34-c0fbf53e713c", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '8edcc469-0feb-4e17-be34-c0fbf53e713c' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:51:in 'ItemsController#update'
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 16:52:20 +0300
+Processing by ItemsController#show_all as */*
+  Parameters: {"user_id" => "2"}
+[active_model_serializers]   [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 2 /*action='show_all',application='SvcItems',controller='items'*/[0m
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:66:in 'ItemsController#show_all'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (21.16ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/relay/events" for 172.18.0.1 at 2025-05-29 17:00:09 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/relay/events"):
+  
+Started GET "/users/2/items/all" for ::1 at 2025-05-29 17:09:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "all"}
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'all' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Completed 404 Not Found in 30ms (ActiveRecord: 13.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with [WHERE `items`.`uuid` = ? AND `items`.`user_id` = ?]):
+  
+app/controllers/items_controller.rb:3:in 'ItemsController#show'
+Started GET "/users/2/items/" for ::1 at 2025-05-29 17:09:34 +0300
+Processing by ItemsController#index as */*
+  Parameters: {"user_id" => "2"}
+[active_model_serializers]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`user_id` = 2 /*action='index',application='SvcItems',controller='items'*/[0m
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:66:in 'ItemsController#index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (22.15ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+

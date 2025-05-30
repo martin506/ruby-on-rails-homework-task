@@ -925,3 +925,98 @@ Processing by ItemsController#index as */*
 Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/users/2/items/aa9e2476-2956-4bb5-b756-fee5be18a2d4" for ::1 at 2025-05-30 08:15:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#show as */*
+  Parameters: {"user_id" => "2", "uuid" => "aa9e2476-2956-4bb5-b756-fee5be18a2d4"}
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = 'aa9e2476-2956-4bb5-b756-fee5be18a2d4' AND `items`.`user_id` = 2 LIMIT 1 /*action='show',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:3:in 'ItemsController#show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 37ms (Views: 1.7ms | ActiveRecord: 11.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 08:45:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mItem Update (1.8ms)[0m  [1m[33mUPDATE `items` SET `items`.`brand` = 'martin somet', `items`.`photo_url` = 'simas simas', `items`.`updated_at` = '2025-05-30 05:45:20.194958' WHERE `items`.`id` = 11 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 35ms (Views: 2.2ms | ActiveRecord: 17.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 08:45:24 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f", "item" => {"price" => 1.23, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 08:53:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#update as */*
+  Parameters: {"price" => 1.25, "brand" => "martin somet", "photo_url" => "simas simas", "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f", "item" => {"price" => 1.25, "brand" => "martin somet", "photo_url" => "simas simas"}}
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mItem Update (1.8ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.25, `items`.`updated_at` = '2025-05-30 05:53:49.817490' WHERE `items`.`id` = 11 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 35ms (Views: 2.1ms | ActiveRecord: 16.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/relay/events" for 172.18.0.1 at 2025-05-30 09:00:04 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/relay/events"):
+  
+Started PATCH "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 09:00:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC /*application='SvcItems'*/[0m
+Processing by ItemsController#update as */*
+  Parameters: {"item" => {"price" => 1.25, "brand" => "martin somet", "photo_url" => "simas simas"}, "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f"}
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 45ms (Views: 2.1ms | ActiveRecord: 11.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 09:01:01 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"item" => {"price" => 1.27, "brand" => "martin somet", "photo_url" => "simas simas"}, "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mItem Update (2.4ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.27, `items`.`updated_at` = '2025-05-30 06:01:01.255669' WHERE `items`.`id` = 11 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 23ms (Views: 1.0ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/users/2/items/74b8c1f2-133d-48f9-b266-f0973178642f" for ::1 at 2025-05-30 09:01:07 +0300
+Processing by ItemsController#update as */*
+  Parameters: {"item" => {"price" => 1.58, "brand" => "martin somet", "photo_url" => "simas simas"}, "user_id" => "2", "uuid" => "74b8c1f2-133d-48f9-b266-f0973178642f"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`uuid` = '74b8c1f2-133d-48f9-b266-f0973178642f' AND `items`.`user_id` = 2 LIMIT 1 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:51:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mItem Update (1.7ms)[0m  [1m[33mUPDATE `items` SET `items`.`price` = 1.58, `items`.`updated_at` = '2025-05-30 06:01:07.617060' WHERE `items`.`id` = 11 /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='update',application='SvcItems',controller='items'*/[0m
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 3.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+

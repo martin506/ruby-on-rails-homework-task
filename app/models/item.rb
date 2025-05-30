@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Item < ApplicationRecord
+  belongs_to :user
+
   enum :status, sold: 0, active: 1
   before_create :set_uuid
 

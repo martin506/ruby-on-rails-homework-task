@@ -107,6 +107,8 @@ RSpec.describe ItemsController do
       expect(parsed_response['photo_url']).to eq("url")
       expect(parsed_response['user_id']).to eq(user_id)
     end
+
+    include_examples 'user does not exist'
   end
 
   describe '#destroy' do
@@ -130,6 +132,9 @@ RSpec.describe ItemsController do
       expect(parsed_response['photo_url']).to eq(item.photo_url)
       expect(parsed_response['user_id']).to eq(item.user_id)
     end
+
+    include_examples 'user does not exist'
+    include_examples 'item does not exist'
   end
 
   describe '#index' do

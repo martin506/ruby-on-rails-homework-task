@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
+
     @item = Item.create!(
       user_id: params[:user_id].to_i,
       price: params[:price],
